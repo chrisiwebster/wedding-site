@@ -1,20 +1,19 @@
-const menuButton = document.querySelector('.menu');
-const navMenu = document.querySelector('.mobile-nav-wrapper');
-const h1 = document.querySelector('h1');
+const menuButton = document.querySelector(".menu");
+const navMenu = document.querySelector(".mobile-nav-wrapper");
+const h1 = document.querySelector("h1");
 const daysCountdown = document.querySelector("#days");
-const hoursCountdown = document.querySelector('#hours');
-const minsCountdown = document.querySelector('#mins');
-const secsCountdown = document.querySelector('#secs');
+const hoursCountdown = document.querySelector("#hours");
+const minsCountdown = document.querySelector("#mins");
+const secsCountdown = document.querySelector("#secs");
 const weddingDate = new Date("July 31, 2021 14:30").getTime();
 
-menuButton.addEventListener("click", function() {
-  menuButton.classList.toggle('opened');
-  navMenu.classList.toggle('toggled');
-  h1.classList.toggle('z-toggle'); //menu was appearing behind the heading because the heading has zindex 1.
-})
+menuButton.addEventListener("click", function () {
+  menuButton.classList.toggle("opened");
+  navMenu.classList.toggle("toggled");
+  h1.classList.toggle("z-toggle"); //menu was appearing behind the heading because the heading has zindex 1.
+});
 
-
-let x = setInterval(() => {
+const x = setInterval(() => {
   let now = new Date().getTime();
   /*Sees how long is left*/
   let distance = weddingDate - now;
@@ -28,10 +27,8 @@ let x = setInterval(() => {
   hoursCountdown.innerHTML = hours;
   minsCountdown.innerHTML = minutes;
   secsCountdown.innerHTML = seconds;
-  
 
-  if(distance < 0){
+  if (distance < 0) {
     clearInterval(x);
   }
-}, 1000)
-
+}, 1000);

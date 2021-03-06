@@ -1,0 +1,71 @@
+/* MOBILE FIRST */
+
+/* HEADER STYLES */
+
+header {
+  min-height: auto;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+}
+
+h2 i {
+  margin-right: 0.2em;
+}
+
+/*--------------*/
+/*MAIN BODY */
+
+div.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 80vw;
+  justify-content: center;
+}
+
+img {
+  align-items: center;
+  padding: 1em;
+}
+
+.text-wrapper p {
+  margin: 1.5em 0 1em 0;
+}
+
+button.external {
+  margin-left: 1.1em;
+}
+
+button.external a {
+  color: #fdf9e6;
+}
+
+button.external:hover,
+button.external:active {
+  background-color: #b1a3ff;
+}
+
+@media screen and (min-width: 720px) {
+  header h1 {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  header p {
+    text-align: center;
+  }
+
+  div.flex-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 30vw;
+  }
+
+  div.text-wrapper {
+    padding: 1em;
+  }
+}

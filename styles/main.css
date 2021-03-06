@@ -1,12 +1,12 @@
 /* MOBILE FIRST */
 
+/* GENERAL STYLES */
 * {
   box-sizing: border-box;
 }
 
-body {
+body:not(footer) {
   max-width: 100vw;
-
   background-color: #fdf9e6;
 }
 
@@ -14,8 +14,10 @@ p,
 a,
 h1,
 h2,
-h3 {
+h3,
+ul {
   font-family: "Plantagenet Cherokee", Arial, sans-serif;
+  padding: 0 0.5rem;
 }
 
 a {
@@ -32,19 +34,60 @@ a:visited {
   color: rgba(0, 0, 0, 0.8);
 }
 
+a:active,
+a:focus {
+  border-radius: 1px black solid;
+}
+
 h1 {
   font-size: 3rem;
-  padding: 0 0.5rem;
 }
 
 h2 {
   font-size: 1.5rem;
+  margin: 0.5em 0 0.75em 0;
 }
 
+p,
+ul li {
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+
+ul li {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+strong {
+  font-weight: 800;
+}
+
+/*------------------------*/
+
+/*HEADER STYLES */
 /*Header flowers */
 
 header {
   min-height: 40vh;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  line-height: 50px;
+  top: 12px;
+}
+
+/* Breaks the line so it doesn't overlap with the flowers */
+h1 span.firstLine {
+  display: block;
+}
+
+/* toggles the h1 to zindex 0 when the mobile menu is toggled */
+h1.z-toggle {
+  z-index: 0 !important;
 }
 
 header div.flowers {
@@ -69,7 +112,6 @@ header .flower3 {
   overflow: hidden;
   width: 100px;
   height: 92.47px;
-  right: -15px;
   top: -25px;
   background: url("../assets/violet-flowers.png");
 }
@@ -78,12 +120,12 @@ header .flower2 {
   position: relative;
   width: 100px;
   height: 92.47px;
-  right: 70px;
+  right: 80px;
   top: 30px;
   background: url("../assets/violet-flowers.png");
 }
 
-/* NAV */
+/* Nav styles */
 .desktop-nav-wrapper {
   display: none;
 }
@@ -91,25 +133,28 @@ header .flower2 {
 .mobile-nav-wrapper {
   width: 100%;
   z-index: 1;
-  /* top: 0 */
   position: absolute;
   display: none;
   background-color: inherit;
   min-width: 100vw;
   height: auto;
-  margin-top: 10px;
-  padding: 10px;
+  padding: 15px 10px;
+}
+
+.mobile-nav-wrapper ul li {
+  list-style-type: none;
+  margin: 0;
 }
 
 .mobile-nav-wrapper li {
   padding: 1em;
 }
 
-/*BURGER MENU ICON*/
+/*Burger menu*/
 
 .toggled {
   /*Menu appears when burger icon clicked*/
-  top: 80px;
+  top: 85px;
   display: block !important;
   margin-bottom: 10px;
 }
@@ -126,6 +171,7 @@ button.menu {
   cursor: pointer;
   display: flex;
   padding: 0;
+  margin-bottom: 0.76em;
 }
 
 .line {
@@ -162,15 +208,40 @@ button.menu {
   stroke-width: 6;
 }
 
+/*---------------------*/
+
+/* MAIN BODY STYLES */
 main {
-  min-height: calc(100vh - 50vh);
+  min-height: calc(100vh - 50vh); /*So the footer stays at the bottom*/
+  padding: 1em;
 }
 
+button:not(button.menu) {
+  display: block;
+  background: #914dd0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  height: auto;
+  padding: 1em 1.5em;
+}
+
+button:hover:not(.menu) {
+  cursor: pointer;
+  background-color: #b1a3ff;
+}
+
+/*-------------------------*/
+/*FOOTER STYLES */
+
 footer {
-  height: 10px;
-  text-align: right;
   padding: 0.75em;
-  vertical-align: middle;
+  opacity: 70%;
+}
+
+footer p {
+  text-align: right;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 380px) {
@@ -188,8 +259,12 @@ footer {
 
   nav.desktop-nav-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 1.5em;
+  }
+
+  nav.desktop-nav-wrapper a {
+    padding: 0 2em;
   }
 
   header div.flowers {
@@ -209,6 +284,14 @@ footer {
   header .flower2 {
     right: 90px;
     top: 30px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h1 span.firstLine {
+    display: inline;
   }
 }
 

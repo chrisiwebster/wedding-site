@@ -1,0 +1,38 @@
+/*Mobile first */
+
+/* HEADER STYLES */
+header h1:first-line {
+  max-width: 50%;
+}
+
+header img {
+  width: 100vw;
+  opacity: 90%;
+}
+
+/*------------------------*/
+
+/* MAIN BODY STYLE */
+h2 i {
+  margin-right: 0.2em;
+}
+
+@media screen and (max-width: 380px) {
+  /* Really small mobiles */
+}
+
+@media screen and (min-width: 720px) {
+  header img {
+    margin: 0 auto;
+    display: block;
+    width: 50vw;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+}
