@@ -4,7 +4,10 @@
 
 header {
   min-height: auto;
-  border-bottom: 1px solid black;
+}
+
+header p {
+  padding: 0.5em;
 }
 
 h1 {
@@ -17,25 +20,45 @@ h2 i {
 
 /*--------------*/
 /*MAIN BODY */
-
-div.flex-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-width: 80vw;
-  justify-content: center;
+div.cards-wrapper {
+  width: 80vw;
+  margin: 0 auto;
 }
 
-img {
+div.card {
+  margin: 1em 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background: #f2f7fc;
+}
+
+div.card-header {
+  color: #f2f7fc;
+}
+
+div.card-header h2 {
+  background: #8f9fb0;
+  padding: 0.5em;
+  margin: 0;
+}
+
+div.card-header img {
   align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+div.card-text {
+  margin: 0;
   padding: 1em;
 }
 
-.text-wrapper p {
+.card-text p {
   margin: 1.5em 0 1em 0;
 }
 
 button.external {
-  margin-left: 1.1em;
+  width: 100%;
 }
 
 button.external a {
@@ -44,7 +67,12 @@ button.external a {
 
 button.external:hover,
 button.external:active {
-  background-color: #b1a3ff;
+  background-color: #eed9fc;
+}
+
+button.external:hover a,
+button.external:active a {
+  color: black;
 }
 
 @media screen and (min-width: 720px) {
@@ -52,20 +80,29 @@ button.external:active {
     width: 80vw;
     margin: 0 auto;
   }
+
+  header p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  /*Large desktop screens */
+  header h1 {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
   header p {
     text-align: center;
   }
 
-  div.flex-wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
+  div.cards-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
-  img {
-    width: 30vw;
-  }
-
-  div.text-wrapper {
-    padding: 1em;
+  div.card {
+    margin: 1em;
   }
 }

@@ -9,34 +9,30 @@
 }
 
 /* MAIN BODY STYLES */
-
 button#rsvp {
   margin: 1em auto;
 }
 
 button#rsvp a {
   font-size: 1.15rem;
+  color: #f2f7fc;
   text-align: center;
-  color: #fdf9e6;
-  text-decoration: none;
   letter-spacing: 0.1em;
 }
 
 div#info-wrapper {
   display: flex;
-  /* padding: 1em; */
-  margin: 0 auto;
-  width: 90vw;
+  margin: 2em auto;
+  width: 80%;
 }
 
 div#info-wrapper div {
-  padding: 1em;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
 }
 
 div#info-wrapper h2 {
   width: 100%;
-  padding-bottom: 0.5rem;
 }
 
 div#info-wrapper h2 i {
@@ -49,13 +45,12 @@ div#info-wrapper h2 i.fa-clock {
 
 div#info-wrapper p {
   line-height: 1.5;
-  width: 80%;
 }
 
 div#countdown {
-  border-radius: 5px;
-  padding: 2rem;
-  background-color: #b1a3ff;
+  border-radius: 2px;
+  padding: 1rem;
+  background-color: #8f9fb0;
   color: #fdf9e6;
   text-align: center;
   line-height: 1.5;
@@ -67,7 +62,7 @@ div#countdown h2 {
 }
 
 main {
-  padding: 0; /*So the countdown goes the full width of the mobile screen */
+  padding: 0;
 }
 
 @media screen and (max-width: 360px) {
@@ -86,17 +81,12 @@ main {
     margin: 0 auto;
   }
 
-  div#info-wrapper {
-    width: 100%;
-    justify-content: center;
-  }
-
-  div#info-wrapper div {
-    width: auto;
-  }
-
   div#info-wrapper h2 {
     font-size: 2rem;
+  }
+
+  div#weather h2 {
+    text-align: center;
   }
 }
 

@@ -6,7 +6,7 @@ header h1:first-line {
 }
 
 header img {
-  width: 100vw;
+  width: 100%;
   opacity: 90%;
 }
 
@@ -17,22 +17,18 @@ h2 i {
   margin-right: 0.2em;
 }
 
-@media screen and (max-width: 380px) {
-  /* Really small mobiles */
+p:nth-of-type(2n) {
+  margin-bottom: 1.5em; /*Gives more of a space between the different methods of travelling */
 }
 
 @media screen and (min-width: 720px) {
   header img {
     margin: 0 auto;
     display: block;
-    width: 50vw;
   }
 
   main {
     margin: 0 auto;
     width: 70vw;
   }
-}
-
-@media screen and (min-width: 800px) {
 }

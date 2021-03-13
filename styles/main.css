@@ -10,14 +10,17 @@ body:not(footer) {
   background-color: #fdf9e6;
 }
 
-p,
-a,
 h1,
 h2,
-h3,
-ul {
+h3 {
   font-family: "Plantagenet Cherokee", Arial, sans-serif;
   padding: 0 0.5rem;
+}
+
+p,
+a,
+ul {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
@@ -36,7 +39,7 @@ a:visited {
 
 a:active,
 a:focus {
-  border-radius: 1px black solid;
+  border-radius: #f2f7fc 1px solid;
 }
 
 h1 {
@@ -70,7 +73,7 @@ strong {
 /*Header flowers */
 
 header {
-  min-height: 40vh;
+  min-height: 30vh;
 }
 
 header h1 {
@@ -80,57 +83,24 @@ header h1 {
   top: 12px;
 }
 
-/* Breaks the line so it doesn't overlap with the flowers */
-h1 span.firstLine {
-  display: block;
-}
-
-/* toggles the h1 to zindex 0 when the mobile menu is toggled */
+/* toggles the h1 to z-index 0 when the mobile menu is toggled */
 h1.z-toggle {
   z-index: 0 !important;
-}
-
-header div.flowers {
-  position: absolute;
-  top: -10%;
-  right: 0px;
-  z-index: 1;
-}
-
-header .flower1 {
-  position: relative;
-  overflow: hidden;
-  width: 100px;
-  height: 92.47px;
-  right: 0px;
-  top: 70px;
-  background: url("../assets/violet-flowers.png");
-}
-
-header .flower3 {
-  position: relative;
-  overflow: hidden;
-  width: 100px;
-  height: 92.47px;
-  top: -25px;
-  background: url("../assets/violet-flowers.png");
-}
-
-header .flower2 {
-  position: relative;
-  width: 100px;
-  height: 92.47px;
-  right: 80px;
-  top: 30px;
-  background: url("../assets/violet-flowers.png");
 }
 
 /* Nav styles */
 .desktop-nav-wrapper {
   display: none;
+  background-color: #a28fb0;
 }
 
 .mobile-nav-wrapper {
+  background: #a28fb0;
+  padding-bottom: 0.1em;
+  margin-bottom: 1em;
+}
+
+.mobile-nav-links {
   width: 100%;
   z-index: 1;
   position: absolute;
@@ -150,6 +120,10 @@ header .flower2 {
   padding: 1em;
 }
 
+.mobile-nav-links a {
+  color: #f2f7fc;
+}
+
 /*Burger menu*/
 
 .toggled {
@@ -166,7 +140,7 @@ button.menu:focus {
 }
 
 button.menu {
-  background-color: transparent;
+  background: transparent;
   border: none;
   cursor: pointer;
   display: flex;
@@ -176,7 +150,7 @@ button.menu {
 
 .line {
   fill: none; /*This is to remove any fill so you just see the lines*/
-  stroke: black;
+  stroke: #f2f7fc;
   stroke-width: 2;
   transition: stroke-dashoffset 400ms;
 }
@@ -212,43 +186,42 @@ button.menu {
 
 /* MAIN BODY STYLES */
 main {
-  min-height: calc(100vh - 50vh); /*So the footer stays at the bottom*/
+  min-height: calc(100vh - 40vh); /*So the footer stays at the bottom*/
   padding: 1em;
 }
 
 button:not(button.menu) {
+  background-color: #a28fb0;
   display: block;
-  background: #914dd0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
   border: none;
   height: auto;
   padding: 1em 1.5em;
 }
 
-button:hover:not(.menu) {
+button:hover {
   cursor: pointer;
-  background-color: #b1a3ff;
+}
+
+button a:hover {
+  text-decoration: none;
 }
 
 /*-------------------------*/
 /*FOOTER STYLES */
 
 footer {
+  display: flex;
+  flex-direction: column-reverse;
   padding: 0.75em;
-  opacity: 70%;
+  min-height: 5vh;
 }
 
 footer p {
   text-align: right;
+  align-content: flex-end;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 380px) {
-  /* Really small mobiles */
-  header div.flowers {
-    top: -100px;
-  }
 }
 
 @media screen and (min-width: 720px) {
@@ -257,46 +230,22 @@ footer p {
     display: none;
   }
 
+  .mobile-nav-wrapper {
+    margin: 0;
+  }
+
   nav.desktop-nav-wrapper {
     display: flex;
     justify-content: center;
-    margin: 1.5em;
+    padding: 1.5em;
   }
 
   nav.desktop-nav-wrapper a {
     padding: 0 2em;
-  }
-
-  header div.flowers {
-    right: -50px;
-  }
-
-  header .flower1 {
-    right: 0px;
-    top: 70px;
-  }
-
-  header .flower3 {
-    right: -10px;
-    top: -25px;
-  }
-
-  header .flower2 {
-    right: 90px;
-    top: 30px;
+    color: #f2f7fc;
   }
 
   h1 {
     text-align: center;
-  }
-
-  h1 span.firstLine {
-    display: inline;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  header div.flowers {
-    top: -75px;
   }
 }
