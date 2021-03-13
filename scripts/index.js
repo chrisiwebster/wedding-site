@@ -62,3 +62,4 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?id=3034125&appid=${key}`)
         weatherDisplay.innerHTML = '<i class="fas fa-cloud-rain"></i>';
     }
   });
+//https://openweathermap.org/weather-conditions - use this to see what type of weather it can return.
