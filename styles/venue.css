@@ -32,12 +32,9 @@ div.card {
   background: #f2f7fc;
 }
 
-div.card-header {
-  color: #f2f7fc;
-}
-
 div.card-header h2 {
   background: #8f9fb0;
+  color: #1d0029;
   padding: 0.5em;
   margin: 0;
 }

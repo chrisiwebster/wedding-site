@@ -53,11 +53,15 @@ div#countdown h2 {
   font-size: 1.5rem;
 }
 
+div#countdown p {
+  color: #5d445d;
+}
+
 /* WEATHER STYLES */
 
 #weather-wrapper {
   background: #8f9fb0;
-  color: #fdf9e6;
+  color: #5d445d;
   padding: 1em;
   text-align: center;
 }
