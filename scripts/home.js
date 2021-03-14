@@ -54,19 +54,19 @@ window.addEventListener("load", async () => {
       switch (true) {
         case weatherMain == "Rain":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/10d@4x.png">';
+            '<img src="http://openweathermap.org/img/wn/10d@4x.png" alt="">';
           break;
         case weatherMain == "Clouds":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/03d@4x.png">';
+            '<img src="http://openweathermap.org/img/wn/03d@4x.png" alt="">';
           break;
         case weatherMain == "Clear":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/01d@4x.png">';
+            '<img src="http://openweathermap.org/img/wn/01d@4x.png" alt="">';
           break;
         case weatherMain == "Snow":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/13d@4x.png">';
+            '<img src="http://openweathermap.org/img/wn/13d@4x.png"> alt=""';
           break;
         case weatherMain == "Mist" ||
           weatherMain == "Smoke" ||
@@ -78,15 +78,15 @@ window.addEventListener("load", async () => {
           weatherMain == "Squall" ||
           weatherMain == "Tornado":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/50d@2x.png">';
+            '<img src="http://openweathermap.org/img/wn/50d@2x.png" alt="">';
           break;
         case weatherMain == "Drizzle":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/09d@2x.png">';
+            '<img src="http://openweathermap.org/img/wn/09d@2x.png" alt="">';
           break;
         case weatherMain == "Thunderstorm":
           weatherIcon.innerHTML =
-            '<img src="http://openweathermap.org/img/wn/11d@2x.png">';
+            '<img src="http://openweathermap.org/img/wn/11d@2x.png" alt="">';
           break;
       }
       weatherTemp.innerHTML = Math.round(temp);
