@@ -32,3 +32,9 @@ p:nth-of-type(2n) {
     width: 70vw;
   }
 }
+
+@media screen and (min-width: 1020px) {
+  header img {
+    width: 50%;
+  }
+}
