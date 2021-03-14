@@ -1,4 +1,3 @@
-import key from "./_apikey.js";
 window.addEventListener("load", async () => {
   const daysCountdown = await document.querySelector("#days");
   const hoursCountdown = await document.querySelector("#hours");
@@ -33,7 +32,7 @@ window.addEventListener("load", async () => {
   }, 1000);
 
   //Weather API
-
+  const key = config.weatherAPIKey;
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?id=3034125&units=metric&appid=${key}`
   )
