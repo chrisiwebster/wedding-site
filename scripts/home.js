@@ -32,7 +32,7 @@ window.addEventListener("load", async () => {
   }, 1000);
 
   //Weather API
-  const key = "51d943a45b5fb52aedcf73db62cd7b54",;
+  const key = "51d943a45b5fb52aedcf73db62cd7b54";
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?id=3034125&units=metric&appid=${key}`
   )
