@@ -152,7 +152,7 @@ button.menu {
 
 .line {
   fill: none; /*This is to remove any fill so you just see the lines*/
-  stroke: #f2f7fc;
+  stroke: #00202a;
   stroke-width: 2;
   transition: stroke-dashoffset 400ms;
 }
