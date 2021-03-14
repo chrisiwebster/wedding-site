@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Lou & Josh's wedding site</title>
-  <meta name="description" content="" />
+  <meta name="description" content="Welcome to Lou & Josh's wedding site" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../styles/reset.css" />
-  <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="../styles/home.css" />
-  <script type="module" src="./scripts/index.js" async defer></script>
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/home.css" />
+  <script type="module" src="./scripts/home.js" async defer></script>
+  <script src="./scripts/main.js" async defer></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/35e4240984.js" crossorigin="anonymous"></script>
@@ -43,26 +44,20 @@
     </div>
   </nav>
   <nav class="desktop-nav-wrapper">
-    <p>
-      <a href="./index.html">Home</a>
-    </p>
-    <p>
-      <a href="./travel.html">Travel</a>
-    </p>
-    <p>
-      <a href="./venue.html">Venue</a>
-    </p>
-    <p>
-      <a href="./contact.html">RSVP</a>
-    </p>
+    <a href="./index.html">Home</a>
+    <a href="./travel.html">Travel</a>
+    <a href="./venue.html">Venue</a>
+    <a href="./contact.html">RSVP</a>
   </nav>
 
   <header>
     <h1 id="home">Lou & Josh</h1>
-    <img src="../assets/couple.jpeg" alt="" id="header-image" title="Image of couple" />
+    <img src="./assets/couple.jpeg" alt="" id="header-image" title="Image of couple" />
   </header>
   <main>
-    <button id="rsvp"><a href="./contact.html">RSVP</a></button>
+    <form action="./contact.html">
+      <button id="rsvp" value="RSVP">RSVP</button>
+    </form>
     <div id="info-wrapper">
       <div id="event-info">
         <h2><i class="fas fa-map-marker-alt"></i>Location</h2>
@@ -80,16 +75,21 @@
         <p><span id="secs"></span> secs</p>
       </div>
     </div>
-    <h2>Weather in Barbirey-sur-Ouche, France</h2>
-    <div id="weather-wrapper">
-      <div id="weather-type">
-        <p>It is <span id="weather-type-text"></span></p>
-        <p><span id="weather-type-icon">
 
-          </span></p>
-      </div>
-      <div id="weather-desciption">
-        <p id="weather-description-text"></p>
+    <div id="weather-wrapper">
+      <h2>Weather in Barbirey-sur-Ouche, France</h2>
+      <div id="weather-flex">
+        <div id="type-wrapper">
+          <h3 id="weather-type-text">
+
+          </h3>
+          <span id="weather-type-icon">
+
+          </span>
+        </div>
+        <div id="temp-wrapper">
+          <p><span id="weather-temp"></span>&#176;C</p>
+        </div>
       </div>
     </div>
   </main>

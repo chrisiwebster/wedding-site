@@ -23,18 +23,8 @@ ul {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.25em;
-}
-
 a:hover {
   text-decoration: underline;
-}
-
-a:visited {
-  color: rgba(0, 0, 0, 0.8);
 }
 
 a:active,
@@ -51,16 +41,21 @@ h2 {
   margin: 0.5em 0 0.75em 0;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
 p,
 ul li {
   margin-bottom: 0.5em;
   line-height: 1.2;
   font-size: 1.2em;
+  padding: 0.3em;
 }
 
 ul li {
   list-style: disc;
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 strong {
@@ -70,7 +65,6 @@ strong {
 /*------------------------*/
 
 /*HEADER STYLES */
-/*Header flowers */
 
 header {
   min-height: 30vh;
@@ -122,6 +116,7 @@ h1.z-toggle {
 
 .mobile-nav-links a {
   color: #f2f7fc;
+  text-decoration: none;
 }
 
 /*Burger menu*/
@@ -186,8 +181,7 @@ button.menu {
 
 /* MAIN BODY STYLES */
 main {
-  min-height: calc(100vh - 40vh); /*So the footer stays at the bottom*/
-  padding: 1em;
+  min-height: calc(100vh - 30vh); /*So the footer stays at the bottom*/
 }
 
 button:not(button.menu) {
@@ -198,6 +192,23 @@ button:not(button.menu) {
   border: none;
   height: auto;
   padding: 1em 1.5em;
+  outline: none;
+  font-size: 1.2em;
+}
+
+button {
+  color: #fdf9e6;
+}
+
+button:not(.menu):hover,
+button:not(.menu):active {
+  background-color: #eed9fc;
+  outline: #a28fb0;
+}
+
+button:not(.menu):hover,
+button:not(.menu):active {
+  color: black;
 }
 
 button:hover {
@@ -243,6 +254,9 @@ footer p {
   nav.desktop-nav-wrapper a {
     padding: 0 2em;
     color: #f2f7fc;
+    font-size: 1.25em;
+    text-decoration: none;
+    font-weight: 600;
   }
 
   h1 {

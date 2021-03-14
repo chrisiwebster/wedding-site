@@ -13,13 +13,6 @@ button#rsvp {
   margin: 1em auto;
 }
 
-button#rsvp a {
-  font-size: 1.15rem;
-  color: #f2f7fc;
-  text-align: center;
-  letter-spacing: 0.1em;
-}
-
 div#info-wrapper {
   display: flex;
   margin: 2em auto;
@@ -60,13 +53,28 @@ div#countdown h2 {
   font-size: 1.5rem;
 }
 
-main {
-  padding: 0;
-}
+/* WEATHER STYLES */
 
 #weather-wrapper {
   background: #8f9fb0;
   color: #fdf9e6;
+  padding: 1em;
+  text-align: center;
+}
+
+#weather-wrapper h2 {
+  font-size: 2em;
+}
+
+#weather-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#temp-wrapper p,
+#weather-temp {
+  font-size: 3em;
 }
 
 @media screen and (max-width: 360px) {
@@ -88,15 +96,15 @@ main {
   div#info-wrapper h2 {
     font-size: 2rem;
   }
-
-  div#weather h2 {
-    text-align: center;
-  }
 }
 
 @media screen and (min-width: 1020px) {
   div#countdown {
     width: 50%;
     margin: 0 auto;
+  }
+
+  div#weather-wrapper {
+    justify-content: center;
   }
 }

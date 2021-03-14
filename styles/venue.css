@@ -61,20 +61,6 @@ button.external {
   width: 100%;
 }
 
-button.external a {
-  color: #fdf9e6;
-}
-
-button.external:hover,
-button.external:active {
-  background-color: #eed9fc;
-}
-
-button.external:hover a,
-button.external:active a {
-  color: black;
-}
-
 @media screen and (min-width: 720px) {
   header h1 {
     width: 80vw;
