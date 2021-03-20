@@ -1,1 +1,119 @@
 /*Make a message appear when they've submitted a form successfully. Use event prevent default with forms.*/
+
+/* MOBILE FIRST */
+
+/*HEADER STYLES*/
+header {
+  min-height: auto;
+}
+
+header p {
+  padding: 0.5em;
+}
+
+/* --------------- */
+
+/* MAIN STYLES */
+
+div#name-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+button#nameButton {
+  margin-left: 0.5em;
+}
+
+button#submit {
+  margin: 1em 0;
+}
+
+div#name-wrapper input {
+  width: 80vw;
+  font-size: 1.25em;
+}
+
+div#no-invite {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 2px;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(255, 0, 0, 0.2);
+}
+
+#weddingOptions {
+  /* display: none; */
+  width: 90vw;
+  margin: 0 auto;
+}
+
+#weddingOptions h2 {
+  font-size: 2em;
+}
+
+/* Hidden unless they are responding 'yes'*/
+#continue-form {
+  display: none;
+}
+
+form {
+  opacity: 90%;
+  color: #00202a;
+  padding: 1em;
+  border-radius: 2px;
+}
+
+form label:not(label[for="yes"]):not(label[for="no"]) {
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+form label[for="yes"],
+form label[for="no"],
+select,
+input[type="text"],
+textarea {
+  font-size: 1.25em;
+}
+
+input[type="text"]:not(input[id="name"]),
+input[type="radio"],
+select,
+#rsvp {
+  margin-bottom: 1em;
+}
+
+textarea {
+  width: 100%;
+  height: 20vh;
+}
+
+form label[for="yes"]:focus,
+form label[for="no"]:focus,
+select:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: #a28fb0 auto 1px;
+}
+
+#thanks {
+  margin: 0 auto;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 720px) {
+  header h1 {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  header p {
+    text-align: center;
+  }
+}

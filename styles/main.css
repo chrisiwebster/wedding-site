@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Plantagenet Cherokee";
+  src: url("../assets/plantagenet-cherokee/Plantagenet_Cherokee.ttf");
+}
+
 /* MOBILE FIRST */
 
 /* GENERAL STYLES */
@@ -12,7 +17,8 @@ body:not(footer) {
 
 h1,
 h2,
-h3 {
+h3,
+label:not(label[for="yes"]):not(label[for="no"]) {
   font-family: "Plantagenet Cherokee", Arial, sans-serif;
   padding: 0 0.5rem;
   color: #5d445d;
@@ -20,7 +26,12 @@ h3 {
 
 p,
 a,
-ul {
+ul,
+input,
+label[for="yes"],
+label[for="no"],
+option select,
+textarea {
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -78,61 +89,48 @@ header {
 }
 
 header h1 {
-  position: relative;
-  z-index: 1;
   line-height: 50px;
   top: 12px;
 }
 
-/* toggles the h1 to z-index 0 when the mobile menu is toggled */
-h1.z-toggle {
-  z-index: 0 !important;
-}
-
 /* Nav styles */
-.desktop-nav-wrapper {
-  display: none;
-  background: #a28fb0;
+
+nav a {
+  color: #00202a;
+  text-decoration: none;
+  padding: 0 2em;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
-.mobile-nav-wrapper {
+nav {
   background: #a28fb0;
   padding-bottom: 0.1em;
   margin-bottom: 1em;
 }
 
-.mobile-nav-links {
+.nav-links {
+  display: none;
   width: 100%;
   z-index: 1;
   position: absolute;
-  display: none;
   background-color: inherit;
   min-width: 100vw;
   height: auto;
   padding: 15px 10px;
 }
 
-.mobile-nav-wrapper ul li {
-  list-style-type: none;
-  margin: 0;
-}
-
-.mobile-nav-wrapper li {
-  padding: 1em;
-}
-
-.mobile-nav-links a {
-  color: #00202a;
-  text-decoration: none;
-}
-
 /*Burger menu*/
 
 .toggled {
   /*Menu appears when burger icon clicked*/
-  top: 85px;
-  display: block !important;
+  display: block;
   margin-bottom: 10px;
+}
+
+.toggled a {
+  display: block;
+  padding: 1em;
 }
 
 button.menu:focus {
@@ -194,7 +192,8 @@ main {
 button:not(button.menu) {
   background: #eed9fc;
   display: block;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   border-radius: 3px;
   border: none;
   height: auto;
@@ -240,27 +239,20 @@ footer p {
 }
 
 @media screen and (min-width: 720px) {
-  button.menu,
-  .mobile-nav-wrapper a {
+  button.menu {
     display: none;
   }
 
-  .mobile-nav-wrapper {
-    margin: 0;
+  .nav-links {
+    display: block;
+    text-align: center;
+    position: relative;
   }
 
-  nav.desktop-nav-wrapper {
+  .desktop-nav-wrapper {
     display: flex;
     justify-content: center;
     padding: 1.5em;
-  }
-
-  nav.desktop-nav-wrapper a {
-    padding: 0 2em;
-    color: #00202a;
-    font-size: 1.25em;
-    text-decoration: none;
-    font-weight: 600;
   }
 
   h1 {

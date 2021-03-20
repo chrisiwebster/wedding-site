@@ -14,17 +14,10 @@ button#rsvp {
 }
 
 div#info-wrapper {
-  display: flex;
-  margin: 2em auto;
-  width: 80%;
+  padding: 1em;
 }
 
 div#info-wrapper div {
-  justify-content: center;
-  width: 100%;
-}
-
-div#info-wrapper h2 {
   width: 100%;
 }
 
@@ -81,20 +74,20 @@ div#countdown p {
   font-size: 3em;
 }
 
-@media screen and (max-width: 360px) {
-  /* really small screens */
-  div#info-wrapper {
-    flex-direction: column;
-  }
-
-  div#info-wrapper div {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 720px) {
   #header-image {
     display: block;
     margin: 0 auto;
+  }
+
+  div#info-wrapper {
+    display: flex;
+    margin: 2em auto;
+    width: 80%;
+  }
+
+  div#info-wrapper div {
+    width: 100%;
   }
 
   div#info-wrapper h2 {

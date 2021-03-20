@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <nav class="mobile-nav-wrapper">
+  <nav>
     <button class="menu" aria-label="Main Menu">
       <svg width="80" height="80" viewBox="30 5 40 90">
         <path class="line line1"
@@ -28,43 +28,56 @@
           d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
       </svg>
     </button>
-    <div class="mobile-nav-links">
-      <ul>
-        <li>
-          <a href="./index.html">Home</a>
-        </li>
-        <li>
-          <a href="./travel.html">Travel</a>
-        </li>
-        <li>
-          <a href="./venue.html">Venue</a>
-        </li>
-        <li><a href="./contact.html">RSVP</a></li>
-      </ul>
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./travel.html">Travel</a>
+      <a href="./venue.html">Venue</a>
+      <a href="./contact.html">RSVP</a>
     </div>
-  </nav>
-  <nav class="desktop-nav-wrapper">
-    <a href="./index.html">Home</a>
-    <a href="./travel.html">Travel</a>
-    <a href="./venue.html">Venue</a>
-    <a href="./contact.html">RSVP</a>
   </nav>
   <header>
     <h1>RSVP to our wedding</h1>
+    <p>First enter your first and last name (including a space) so we can check you're on the guest list!</p>
   </header>
   <main>
-    <h2>Can you come to the wedding?</h2>
-    <form>
+    <div id="name-wrapper">
+      <input type="text" id="name" required>
+      <button id="nameButton">Check</button>
+    </div>
+    <div id="no-invite">
+      <h2>Something went wrong!</h2>
+      <p>Oh no! You're don't appear to be on the wedding list.</p>
+      <p>Check you've entered your name correctly.</p>
+    </div>
+    <div id="weddingOptions">
+      <h2>Ready for the big day?</h2>
+      <form>
+        <label for="rsvp">RSVP</label>
+        <div id="rsvp">
+          <input type="radio" id="yes" value="yes" name="rsvp">
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" value="no" name="rsvp">
+          <label for="no">No</label>
+        </div>
+        <div id="continue-form">
+          <label for="meals">Dietary requirements</label>
+          <select id="meals">
+            <option value="none">None</option>
+            <option value="gluten-free">Gluten free</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+          </select>
+          <label for="song">Do you have a song request?</label>
+          <input type="text" id="song">
+          <label for="comments">Do you want to say anything else?</label>
+          <textarea id="comments"></textarea>
+
+        </div>
+        <button id="submit">Send away!</button>
+    </div>
 
     </form>
-    <h2>Do you have any dietary requirements?</h2>
-    <form>
-      <select>
-        <option>Gluten free</option>
-        <option>Vegan</option>
-        <option>Vegetarian</option>
-      </select>
-    </form>
+    </div>
   </main>
   <footer>
     <p>Made by Chrisi &copy;</p>

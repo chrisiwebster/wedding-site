@@ -1,19 +1,9 @@
 const weddingList = [
-  {
-    name: "Chrisi Webster",
-  },
-  {
-    name: "Jamie Irving",
-  },
-  {
-    name: "Joe Bloggs",
-  },
-  {
-    name: "Jane Doe",
-  },
-  {
-    name: "Tom Hanks",
-  },
+  "chrisi webster",
+  "jamie irving",
+  "joe bloggs",
+  "jane doe",
+  "tom hanks",
 ];
 
 export default weddingList;
