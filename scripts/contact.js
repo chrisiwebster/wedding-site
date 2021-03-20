@@ -63,11 +63,9 @@ window.addEventListener("load", () => {
   form.addEventListener("click", handleRSVP);
 
   const handleSubmit = (ev) => {
-    if ((rsvp.value = "no")) {
-      weddingOptions.innerHTML =
-        '<p id="thanks">Thanks for letting us know!</p>';
-    } else if (rsvp.value != "no" || !mealSelector.value || !songChoice.value) {
+    if (!mealSelector) {
       errorMessage.style.display = "block";
+      select.style.outline = "#a28fb0 auto 1px;";
       //Prevents the page from refreshing
       ev.preventDefault();
     } else {
