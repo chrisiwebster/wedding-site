@@ -11,6 +11,8 @@ window.addEventListener("load", () => {
   const restOfForm = document.querySelector("#continue-form");
   const mealSelector = document.querySelector("#meals");
   const songChoice = document.querySelector("#song");
+  const errorMessage = document.querySelector("#error");
+  const guestDisplay = document.querySelector("#guest");
 
   const handleClearInput = () => {
     //Deletes the error message if there is one and removes the variable so it isn't stored
@@ -26,6 +28,8 @@ window.addEventListener("load", () => {
     for (let i = 0; i < weddingList.length; i++) {
       if (guestName === weddingList[i]) {
         weddingOptions.style.display = "block";
+        guestName.toUpperCase();
+        guestDisplay.innerHTML = guestName;
         noInvite.style.display = "none";
         nameWrapper.style.display = "none";
         break;
@@ -58,9 +62,14 @@ window.addEventListener("load", () => {
 
   form.addEventListener("click", handleRSVP);
 
-  const handleSubmit = () => {
-    if (!rsvp.value || !mealSelector.value || !songChoice.value) {
-      alert("Looks like there's some missing fields");
+  const handleSubmit = (ev) => {
+    if ((rsvp.value = "no")) {
+      weddingOptions.innerHTML =
+        '<p id="thanks">Thanks for letting us know!</p>';
+    } else if (rsvp.value != "no" || !mealSelector.value || !songChoice.value) {
+      errorMessage.style.display = "block";
+      //Prevents the page from refreshing
+      ev.preventDefault();
     } else {
       weddingOptions.innerHTML =
         '<p id="thanks">Thanks for letting us know!</p>';

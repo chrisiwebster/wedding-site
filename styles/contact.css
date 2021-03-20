@@ -34,6 +34,10 @@ div#name-wrapper input {
   font-size: 1.25em;
 }
 
+span#guest {
+  text-transform: uppercase;
+}
+
 div#no-invite {
   display: none;
   margin: 0 auto;
@@ -46,7 +50,7 @@ div#no-invite {
 }
 
 #weddingOptions {
-  /* display: none; */
+  display: none;
   width: 90vw;
   margin: 0 auto;
 }
@@ -102,8 +106,16 @@ textarea:focus {
   outline: #a28fb0 auto 1px;
 }
 
+p#error {
+  display: none;
+  color: red;
+  font-size: 1em;
+}
+
 #thanks {
-  margin: 0 auto;
+  text-align: center;
+  margin: 2em;
+  font-size: 1.5em;
 }
 
 /* DESKTOP */
