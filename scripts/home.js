@@ -33,24 +33,16 @@ window.addEventListener("load", () => {
 
   //Weather API
   const key = "51d943a45b5fb52aedcf73db62cd7b54";
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?id=3034125&units=metric&appid=${key}`
-  )
-    .then(
-      (response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("Request failed!");
-      },
-      (networkError) => {
-        console.log(networkError.message);
-      }
-    )
-    .then((jsonResponse) => {
+  const getWeather = async () => {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?id=3034125&units=metric&appid=${key}`,
+      { cache: "no-cache" }
+    );
+    if (response.ok) {
+      const jsonResponse = await response.json();
       //Weather main is saying what the weather will be like
-      let weatherMain = jsonResponse["weather"][0]["main"];
-      let temp = jsonResponse["main"]["temp"];
+      let weatherMain = await jsonResponse["weather"][0]["main"];
+      let temp = await jsonResponse["main"]["temp"];
       //Description goes into more detail
       let description = jsonResponse["weather"][0]["description"];
       switch (true) {
@@ -97,5 +89,7 @@ window.addEventListener("load", () => {
       weatherText.innerHTML =
         description.charAt(0).toUpperCase() +
         description.slice(1).toLowerCase();
-    }, false);
+    }
+  };
+  getWeather();
 });

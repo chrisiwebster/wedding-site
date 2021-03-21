@@ -72,20 +72,31 @@ window.addEventListener("load", () => {
   };
 
   const handleSubmit = (ev) => {
-    if (!mealSelector.value || !comments.value || !songChoice.value) {
-      errorMessage.style.display = "block";
-      for (let i = 0; i < formArray.length; i++) {
-        if (!formArray[i].value) {
-          formArray[i].classList.toggle("missing");
-        }
+    ev.preventDefault();
+    const editErrorStyle = (item) => {
+      if (!item.value) {
+        item.classList.add("missing");
+      } else {
+        item.classList.remove("missing");
       }
-      ev.preventDefault();
+    };
+    if (responseObject.rsvp === "yes") {
+      //So it doesn't provide an error if someone is saying no
+      if (!mealSelector.value || !comments.value || !songChoice.value) {
+        errorMessage.style.display = "block";
+        for (let i = 0; i < formArray.length; i++) {
+          editErrorStyle(formArray[i]);
+        }
+      } else {
+        responseObject.meal = mealSelector.value;
+        responseObject.song = songChoice.value;
+        responseObject.comments = comments.value;
+        //Logs the object with all of the information, simulating data being sent to the server
+        console.log(responseObject);
+        weddingOptions.innerHTML = weddingOptions.innerHTML =
+          '<p id="thanks">Thanks for letting us know!</p>';
+      }
     } else {
-      ev.preventDefault();
-      responseObject.meal = mealSelector.value;
-      responseObject.song = songChoice.value;
-      responseObject.comments = comments.value;
-      //Logs the object with all of the information, simulating data being sent to the server
       console.log(responseObject);
       weddingOptions.innerHTML = weddingOptions.innerHTML =
         '<p id="thanks">Thanks for letting us know!</p>';

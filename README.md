@@ -24,7 +24,8 @@ Four HTML pages.
 - JavaScript Date library, along with setTimeInterval to countdown to the day of the wedding.
 - Weather API to show the weather in the wedding location
 - Separate JavaScript modules for the functionality on different pages.
-- JavaScript form validation.
+- JavaScript form validation. Guest names to check validation: Jamie Irving, Chrisi Webster, Tom Hanks, Joe Bloggs, Jane Doe.
+- Object of all the objects logged to the console when pressing submit to simulate data being sent to a server.
 
 ## Accessibility
 
