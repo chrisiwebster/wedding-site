@@ -112,6 +112,14 @@ p#error {
   font-size: 1em;
 }
 
+p#error i {
+  margin-right: 2px;
+}
+
+.missing {
+  border: 1px solid red;
+}
+
 #thanks {
   text-align: center;
   margin: 2em;

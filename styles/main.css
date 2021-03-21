@@ -35,7 +35,7 @@ textarea {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-p:not(#temp-wrapper p),
+p:not(#temp-wrapper p):not(#error),
 a,
 ul {
   color: #00202a;
