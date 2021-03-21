@@ -1,3 +1,4 @@
+import("../.env");
 window.addEventListener("load", () => {
   const daysCountdown = document.querySelector("#days");
   const hoursCountdown = document.querySelector("#hours");
