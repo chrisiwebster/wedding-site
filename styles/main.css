@@ -6,8 +6,6 @@
 /* MOBILE FIRST */
 
 /* GENERAL STYLES */
-* {
-}
 
 html {
   box-sizing: border-box;
@@ -56,6 +54,7 @@ a:focus {
 
 h1 {
   font-size: 3rem;
+  margin: 0.5em 0 0.2em 0;
 }
 
 h2 {
@@ -94,10 +93,14 @@ header {
 
 header h1 {
   line-height: 50px;
-  top: 12px;
 }
 
 /* Nav styles */
+nav {
+  background: #a28fb0;
+  padding-bottom: 0.1em;
+  margin-bottom: 1em;
+}
 
 nav a {
   color: #00202a;
@@ -107,10 +110,12 @@ nav a {
   font-weight: 600;
 }
 
-nav {
-  background: #a28fb0;
-  padding-bottom: 0.1em;
-  margin-bottom: 1em;
+button.menu:focus,
+toggled a:focus,
+nav a:focus {
+  outline: none;
+  border: 1px black solid;
+  border-radius: 10px;
 }
 
 .nav-links {
@@ -121,7 +126,6 @@ nav {
   background-color: inherit;
   min-width: 100vw;
   height: auto;
-  padding: 15px 10px;
 }
 
 /*Burger menu*/
@@ -135,12 +139,6 @@ nav {
 .toggled a {
   display: block;
   padding: 1em;
-}
-
-button.menu:focus {
-  outline: none;
-  border: 1px black solid;
-  border-radius: 10px;
 }
 
 button.menu {
@@ -190,9 +188,8 @@ button.menu {
 
 /* MAIN BODY STYLES */
 main {
-  min-height: calc(100vh - 30vh); /*So the footer stays at the bottom*/
+  min-height: calc(100vh - 22vh);
 }
-
 button:not(button.menu) {
   background: #eed9fc;
   display: block;
@@ -202,13 +199,16 @@ button:not(button.menu) {
   border: none;
   height: auto;
   padding: 1em 1.5em;
-  outline: none;
   font-size: 1.2em;
 }
 
 button {
   outline: #545454;
   color: #545454;
+}
+
+button#rsvp:focus {
+  outline: black !important;
 }
 
 button:not(.menu):hover,
@@ -242,6 +242,9 @@ footer p {
   text-transform: uppercase;
 }
 
+/*--------------------*/
+
+/*DESKTOP/TABLET STYLES*/
 @media screen and (min-width: 720px) {
   button.menu {
     display: none;
@@ -253,7 +256,7 @@ footer p {
     position: relative;
   }
 
-  .desktop-nav-wrapper {
+  nav {
     display: flex;
     justify-content: center;
     padding: 1.5em;

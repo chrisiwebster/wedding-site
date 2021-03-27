@@ -1,10 +1,9 @@
-import("../.env");
 window.addEventListener("load", () => {
   const daysCountdown = document.querySelector("#days");
   const hoursCountdown = document.querySelector("#hours");
   const minsCountdown = document.querySelector("#mins");
   const secsCountdown = document.querySelector("#secs");
-  const weddingDate = new Date("July 31, 2021 14:30").getTime();
+  const weddingDate = new Date("July 31, 2022 14:30").getTime();
   const weatherIcon = document.querySelector("#weather-type-icon");
   const weatherText = document.querySelector("#weather-type-text");
   const weatherTemp = document.querySelector("#weather-temp");
@@ -12,9 +11,9 @@ window.addEventListener("load", () => {
   //Countdown clock
   const x = setInterval(() => {
     let now = new Date().getTime();
-    /*Sees how long is left*/
+    //Sees how long is left
     let distance = weddingDate - now;
-    /*Calc for days, hours, minutes*/
+    //Calc for days, hours, minutes
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
     let hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -41,11 +40,13 @@ window.addEventListener("load", () => {
     );
     if (response.ok) {
       const jsonResponse = await response.json();
-      //Weather main is saying what the weather will be like
+      //Weather main is saying what the weather will be like (i.e. cloudy)
       let weatherMain = await jsonResponse["weather"][0]["main"];
+      //Getting the temperature
       let temp = await jsonResponse["main"]["temp"];
       //Description goes into more detail
       let description = jsonResponse["weather"][0]["description"];
+      //Checking what the weather will be like and inserting icon
       switch (true) {
         case weatherMain == "Rain":
           weatherIcon.innerHTML =

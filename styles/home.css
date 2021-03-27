@@ -8,6 +8,8 @@
   z-index: 0;
 }
 
+/*------------*/
+
 /* MAIN BODY STYLES */
 button#rsvp {
   margin: 1em auto;
@@ -50,6 +52,8 @@ div#countdown p {
   color: #5d445d;
 }
 
+/*---------------------*/
+
 /* WEATHER STYLES */
 
 #weather-wrapper {
@@ -74,6 +78,10 @@ div#countdown p {
   font-size: 3em;
 }
 
+/*----------------------*/
+
+/*DESKTOP/TABLET STYLES*/
+
 @media screen and (min-width: 720px) {
   #header-image {
     display: block;
@@ -94,6 +102,10 @@ div#countdown p {
     font-size: 2rem;
   }
 }
+
+/*----------------------*/
+
+/*LARGE SCREEN STYLES*/
 
 @media screen and (min-width: 1020px) {
   div#countdown {

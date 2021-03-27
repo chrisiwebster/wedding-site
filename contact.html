@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta property="og:image" content="../assets/couple.jpeg">
   <title>RSVP | Lou & Josh's wedding</title>
   <meta name="description" content="Contact Lou & Josh to let them know your preferences for their wedding meal." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +43,7 @@
   <main>
     <div id="name-wrapper">
       <input type="text" id="name" required>
-      <button id="nameButton">Check</button>
+      <button id="nameButton" tabindex="0">Check</button>
     </div>
     <div id="no-invite">
       <h2>Something went wrong!</h2>
@@ -50,9 +51,9 @@
       <p>Check you've entered your name correctly.</p>
     </div>
     <div id="weddingOptions">
-      <h2>Ready for the big day?</h2>
-      <p>Completing form for: <span id="guest"></span></p>
       <form>
+        <h2>Ready for the big day?</h2>
+        <p>Completing form for: <span id="guest"></span></p>
         <label for="rsvp">RSVP</label>
         <div id="rsvp">
           <input type="radio" id="yes" value="yes" name="rsvp">
@@ -69,9 +70,11 @@
             <option value="vegan">Vegan</option>
             <option value="vegetarian">Vegetarian</option>
           </select>
-          <label for="song">Do you have a song request?</label>
+          <label for="song">What's your song request?<span class="side-note">Just enter N/A if you have nothing to
+              input.</span></label>
           <input type="text" id="song">
-          <label for="comments">Do you want to say anything else?</label>
+          <label for="comments">Do you want to say anything else?<span class="side-note">Just enter N/A if you have
+              nothing to input.</span></label>
           <textarea id="comments"></textarea>
 
         </div>

@@ -1,5 +1,3 @@
-/*Make a message appear when they've submitted a form successfully. Use event prevent default with forms.*/
-
 /* MOBILE FIRST */
 
 /*HEADER STYLES*/
@@ -15,6 +13,7 @@ header p {
 
 /* MAIN STYLES */
 
+/* Styles for name input and errors*/
 div#name-wrapper {
   display: flex;
   justify-content: center;
@@ -25,6 +24,15 @@ button#nameButton {
   margin-left: 0.5em;
 }
 
+button#nameButton:focus {
+  border: 1px black solid;
+}
+
+button#nameButton:active {
+  background: #8f9fb0;
+  outline: #a28fb0;
+  color: #5d445d;
+}
 button#submit {
   margin: 1em 0;
 }
@@ -49,26 +57,29 @@ div#no-invite {
   background: rgba(255, 0, 0, 0.2);
 }
 
+/* Form styles */
+
+/* Hidden rest of form unless they are on wedding list and responding 'yes'*/
+#continue-form,
 #weddingOptions {
-  display: none;
-  width: 90vw;
-  margin: 0 auto;
-}
-
-#weddingOptions h2 {
-  font-size: 2em;
-}
-
-/* Hidden unless they are responding 'yes'*/
-#continue-form {
   display: none;
 }
 
 form {
-  opacity: 90%;
-  color: #00202a;
-  padding: 1em;
-  border-radius: 2px;
+  width: 95vw;
+  margin: 0 auto;
+}
+/* overriding styles from rest of site so it's inline with labels in form */
+form h2,
+form p {
+  padding: 0;
+}
+
+form h2 {
+  font-size: 2em;
+}
+form p {
+  margin-bottom: 1em;
 }
 
 form label:not(label[for="yes"]):not(label[for="no"]) {
@@ -98,6 +109,12 @@ textarea {
   height: 20vh;
 }
 
+span.side-note {
+  font-size: 0.5em;
+  display: block;
+  margin-top: 0.5em;
+}
+
 form label[for="yes"]:focus,
 form label[for="no"]:focus,
 select:focus,
@@ -106,6 +123,7 @@ textarea:focus {
   outline: #a28fb0 auto 1px;
 }
 
+/*Error message and thank you styles*/
 p#error {
   display: none;
   color: red;
@@ -125,15 +143,19 @@ p#error i {
   margin: 2em;
   font-size: 1.5em;
 }
-
-/* DESKTOP */
+/*------------------*/
+/* DESKTOP/TABLE STYLES */
 @media screen and (min-width: 720px) {
-  header h1 {
-    width: 80vw;
-    margin: 0 auto;
-  }
-
   header p {
     text-align: center;
+  }
+
+  div#name-wrapper input {
+    width: 60vw;
+  }
+
+  form {
+    width: 50vw;
+    margin: 0 auto;
   }
 }

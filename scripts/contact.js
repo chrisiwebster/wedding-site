@@ -23,22 +23,26 @@ window.addEventListener("load", () => {
   let formArray = [];
   //Creating object to save form responses
   const responseObject = {};
-
+  //Pushing form inputs into an array to handle later
   formArray.push(songChoice, mealSelector, comments);
 
+  //Event handlers
   const handleClearInput = () => {
     //Deletes the error message if there is one and removes the variable so it isn't stored
     noInvite.style.display = "none";
-    guestName = undefined;
+    guestName = null;
+    checkButton.classList.remove("button-toggled");
   };
 
+  //Checks to see if the guest is on the wedding list
   const handleCheckingName = () => {
     //Gets the value of what is inputted in the text field
     let guestName = guestNameInput.value.toLowerCase().trim();
     //Makes the input empty
     guestNameInput.value = "";
+    //Goes through wedding list
     for (let i = 0; i < weddingList.length; i++) {
-      if (guestName === weddingList[i]) {
+      if (guestName === weddingList[i].name) {
         weddingOptions.style.display = "block";
         responseObject.name = guestName;
         guestName.toUpperCase();
@@ -71,16 +75,22 @@ window.addEventListener("load", () => {
     }
   };
 
+  //Check to see if any fields are missing
   const handleSubmit = (ev) => {
     ev.preventDefault();
     const editErrorStyle = (item) => {
+      //adds a red border around the input field that is missing
       if (!item.value) {
         item.classList.add("missing");
       } else {
+        //removes the border if it was missing, but now it isn't, but now another field is still missing
         item.classList.remove("missing");
       }
     };
-    if (responseObject.rsvp === "yes") {
+    if (!responseObject.rsvp) {
+      //so the form doesn't submit if they haven't pressed yes or no
+      errorMessage.style.display = "block";
+    } else if (responseObject.rsvp === "yes") {
       //So it doesn't provide an error if someone is saying no
       if (!mealSelector.value || !comments.value || !songChoice.value) {
         errorMessage.style.display = "block";
@@ -104,6 +114,18 @@ window.addEventListener("load", () => {
   };
   //When you click the checkButton it will save what's been put in the input and run through the wedding list to check the names
   checkButton.addEventListener("click", handleCheckingName);
+  //Checks name when someone hits enter instead of clicking the button
+  nameWrapper.addEventListener("keyup", (ev) => {
+    if (ev.keyCode === 13) {
+      handleCheckingName();
+    }
+  });
   rsvpWrapper.addEventListener("click", handleRSVP);
   submitButton.addEventListener("click", handleSubmit);
+  //S
+  submitButton.addEventListener("keyup", (ev) => {
+    if (ev.keyCode === 13) {
+      handleSubmit();
+    }
+  });
 });

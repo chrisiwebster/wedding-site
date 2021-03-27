@@ -1,4 +1,4 @@
-/*Mobile first */
+/*MOBILE FIRST */
 
 /* HEADER STYLES */
 header h1:first-line {
@@ -12,7 +12,7 @@ header img {
 
 /*------------------------*/
 
-/* MAIN BODY STYLE */
+/* MAIN BODY STYLES */
 h2 i {
   margin-right: 0.2em;
 }
@@ -32,6 +32,10 @@ p:nth-of-type(2n) {
     width: 70vw;
   }
 }
+
+/*-----------------------*/
+
+/*LARGE SCREEN STYLES*/
 
 @media screen and (min-width: 1020px) {
   header img {

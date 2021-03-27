@@ -57,24 +57,26 @@ button.external {
   width: 100%;
 }
 
+/*DESKTOP/TABLET STYLES*/
 @media screen and (min-width: 720px) {
   header h1 {
-    width: 80vw;
     margin: 0 auto;
   }
 
   header p {
     text-align: center;
   }
+
+  div.cards-wrapper {
+    width: 95vw;
+  }
 }
 
-@media screen and (min-width: 1020px) {
-  /*Large desktop screens */
-  header h1 {
-    width: 80vw;
-    margin: 0 auto;
-  }
+/*-----------------------------*/
 
+/*LARGE SCREEN STYLES */
+
+@media screen and (min-width: 1020px) {
   header p {
     text-align: center;
   }

@@ -22,17 +22,16 @@ Four HTML pages.
 
 - Event listener on the mobile navigation to toggle the burger menu.
 - JavaScript Date library, along with setTimeInterval to countdown to the day of the wedding.
-- Weather API to show the weather in the wedding location
+- Weather API to show the weather in the wedding location.
 - Separate JavaScript modules for the functionality on different pages.
 - JavaScript form validation. Guest names to check validation: Jamie Irving, Chrisi Webster, Tom Hanks, Joe Bloggs, Jane Doe.
-- Object of all the objects logged to the console when pressing submit to simulate data being sent to a server.
+- Object of all the responses logged to the console when pressing submit to simulate data being sent to a server.
 
 ## Accessibility
 
-I will test using:
+I perfomed tests by using:
 
-- Google Chrome WCAG colour extensions.
-- A screen reader.
+- only my keyboard to navigate.
 - Lighthouse Google Chrome extension.
 
 ## Design process
