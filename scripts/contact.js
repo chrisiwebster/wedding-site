@@ -112,20 +112,43 @@ window.addEventListener("load", () => {
         '<p id="thanks">Thanks for letting us know!</p>';
     }
   };
+
+  //Handlers for the class change
+  const handleEnterPress = (button) => {
+    button.classList.add("active");
+  };
+
+  const handleEnterUp = (button) => {
+    button.classList.remove("active");
+  };
+
   //When you click the checkButton it will save what's been put in the input and run through the wedding list to check the names
   checkButton.addEventListener("click", handleCheckingName);
   //Checks name when someone hits enter instead of clicking the button
-  nameWrapper.addEventListener("keyup", (ev) => {
+  nameWrapper.addEventListener("keydown", (ev) => {
     if (ev.keyCode === 13) {
+      handleEnterPress(checkButton);
       handleCheckingName();
     }
   });
+  nameWrapper.addEventListener("keyup", (ev) => {
+    if (ev.keyCode === 13) {
+      handleEnterUp(checkButton);
+    }
+  });
+
   rsvpWrapper.addEventListener("click", handleRSVP);
   submitButton.addEventListener("click", handleSubmit);
-  //S
+  //Submit button
+  submitButton.addEventListener("keydown", (ev) => {
+    if (ev.keyCode === 13) {
+      handleEnterPress(submitButton);
+      handleSubmit();
+    }
+  });
   submitButton.addEventListener("keyup", (ev) => {
     if (ev.keyCode === 13) {
-      handleSubmit();
+      handleEnterUp(submitButton);
     }
   });
 });

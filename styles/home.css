@@ -15,10 +15,6 @@ button#rsvp {
   margin: 1em auto;
 }
 
-div#info-wrapper {
-  padding: 1em;
-}
-
 div#info-wrapper div {
   width: 100%;
 }
@@ -75,7 +71,7 @@ div#countdown p {
 
 #temp-wrapper p,
 #weather-temp {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /*----------------------*/
@@ -100,6 +96,10 @@ div#countdown p {
 
   div#info-wrapper h2 {
     font-size: 2rem;
+  }
+  #temp-wrapper p,
+  #weather-temp {
+    font-size: 3em;
   }
 }
 

@@ -226,6 +226,12 @@ button a:hover {
   text-decoration: none;
 }
 
+.active {
+  background: #8f9fb0 !important;
+  outline: #a28fb0;
+  color: #5d445d;
+}
+
 /*-------------------------*/
 /*FOOTER STYLES */
 
