@@ -34,7 +34,7 @@ div#info-wrapper p {
 div#countdown {
   background: #e7e6fc;
   border-radius: 2px;
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
   line-height: 1.5;
   margin-bottom: 10px;
