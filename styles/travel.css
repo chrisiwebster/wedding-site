@@ -21,7 +21,7 @@ p:nth-of-type(2n) {
   margin-bottom: 1.5em; /*Gives more of a space between the different methods of travelling */
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   header img {
     margin: 0 auto;
     display: block;
@@ -37,7 +37,7 @@ p:nth-of-type(2n) {
 
 /*LARGE SCREEN STYLES*/
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
   header img {
     width: 50%;
   }

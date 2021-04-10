@@ -107,7 +107,7 @@ div#countdown p {
 
 /*LARGE SCREEN STYLES*/
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
   div#countdown {
     width: 50%;
     margin: 0 auto;

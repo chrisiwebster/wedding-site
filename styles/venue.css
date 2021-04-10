@@ -76,7 +76,7 @@ button.external {
 
 /*LARGE SCREEN STYLES */
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1024px) {
   header p {
     text-align: center;
   }
