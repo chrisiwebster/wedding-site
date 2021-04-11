@@ -259,7 +259,7 @@ footer p {
   .nav-links {
     display: block;
     text-align: center;
-    position: relative;
+    position: static;
   }
 
   nav {

@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
       //Getting the temperature
       let temp = await jsonResponse["main"]["temp"];
       //Description goes into more detail
-      let description = jsonResponse["weather"][0]["description"];
+      let description = await jsonResponse["weather"][0]["description"];
       //Checking what the weather will be like and inserting icon
       switch (true) {
         case weatherMain == "Rain":
